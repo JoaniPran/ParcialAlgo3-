@@ -2,15 +2,17 @@ package ImperioIntergalactico;
 
 public class CovertaMisiles implements AtaqueDisparable{
 
-    int canitdadDeMisiles = 3;
-    @Override
+    public int canitdadDeMisiles = 3;
 
     public int obtenerPuntosDeAtaque(){
         return (this.canitdadDeMisiles * 10);
     }
 
-    @Override
-    public void disparar(int CantidadDeMisiles) {
-        this.canitdadDeMisiles = this.canitdadDeMisiles - CantidadDeMisiles;
+    public void disparar() {
+        this.canitdadDeMisiles = this.canitdadDeMisiles - 1 ;
+    }
+
+    public int cantidadDeBombas(){
+        return this.canitdadDeMisiles;
     }
 }

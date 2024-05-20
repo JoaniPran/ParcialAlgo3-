@@ -1,6 +1,6 @@
 package ImperioIntergalactico;
 
 public interface SistemaDefensa {
-    public void recibirDaño(int cantidadDeMisiles);
+    public void recibirDanio(int cantidadDeMisiles);
     public int obtenerPuntoDeDefensa();
 }

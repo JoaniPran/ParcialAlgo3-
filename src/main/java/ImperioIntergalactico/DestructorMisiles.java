@@ -7,10 +7,17 @@ public class DestructorMisiles implements AtaqueDisparable{
     public int obtenerPuntosDeAtaque(){
         if (canitdadDeMisiles == 5) {
             return (this.canitdadDeMisiles * 10) + 20;
+        }else{
+            return (this.canitdadDeMisiles);
         }
-        return 0;
+
     }
-    public void disparar(int CantidadDeMisiles) {
-        this.canitdadDeMisiles = this.canitdadDeMisiles - CantidadDeMisiles;
+    public void disparar() {
+        this.canitdadDeMisiles = this.canitdadDeMisiles - 1;
     }
+
+    public int cantidadDeBombas(){
+        return this.canitdadDeMisiles;
+    }
+
 }
