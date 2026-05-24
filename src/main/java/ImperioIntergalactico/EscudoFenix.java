@@ -7,11 +7,12 @@ public class EscudoFenix implements SistemaDefensa {
         this.puntosdDeDefensa = puntosDefensa;
     }
 
-    public void recibirDanio(int cantidadDeMisiles) {
+    public SistemaDefensa recibirDanio(int cantidadDeMisiles) {
         this.puntosdDeDefensa = puntosdDeDefensa - (cantidadDeMisiles * 10);
-        if (this.puntosdDeDefensa < 0) {
-            this.puntosdDeDefensa = 0;
-        }
+            if (puntosdDeDefensa < 0) {
+                return new EscudoSimple(30);
+            }
+            return this;
     }
 
     public int obtenerPuntoDeDefensa() {

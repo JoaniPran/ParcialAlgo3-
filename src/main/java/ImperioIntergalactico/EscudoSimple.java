@@ -7,13 +7,15 @@ public class EscudoSimple implements SistemaDefensa{
         this.puntosdDeDefensa = puntosDefensa;
     }
 
-    public void recibirDanio(int cantidadDeMisiles){
-        this.puntosdDeDefensa = puntosdDeDefensa - cantidadDeMisiles * 10;
-        if (this.puntosdDeDefensa < 0) {
-            this.puntosdDeDefensa = 0;
+    public SistemaDefensa recibirDanio(int cantidadDeMisiles){
+            this.puntosdDeDefensa = this.puntosdDeDefensa - cantidadDeMisiles;
+            return this;
         }
-    }
+
     public int obtenerPuntoDeDefensa(){
         return (this.puntosdDeDefensa);
     }
+
+
+
 }

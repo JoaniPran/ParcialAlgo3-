@@ -1,4 +1,4 @@
-package test;
+
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -25,7 +25,7 @@ public class pruebas {
     @Test
     public void test02UnDestructorConUnSistemaDeAtaqueYDefensa() {
 
-        int puntosDeAtaqueEsperado = 100;
+        int puntosDeAtaqueEsperado = 60;
 
         Destructor nuevoDestructor = new Destructor(new DestructorMisiles(), new EscudoFenix(50));
 

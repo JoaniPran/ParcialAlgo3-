@@ -10,10 +10,6 @@ public class Destructor extends Nave{
         this.tipoDeDefensa = Defensa;
     }
     public int puntosTotates(){
-
-        if (tipoDeDefensa.obtenerPuntoDeDefensa() == 0 ){
-            tipoDeDefensa =  new EscudoSimple(30);
-        }
         return (tipoDeAtaque.obtenerPuntosDeAtaque() + tipoDeDefensa.obtenerPuntoDeDefensa());
     }
 
